@@ -1,0 +1,360 @@
+/*
+  Projeto: Portfólio - Naian Willian Azevedo da Silva
+  Arquivo: style.css
+  Autor: Naian Willian Azevedo da Silva
+  Data: 2026-05-03
+  Versão: 1.0
+  Objetivo: Estilos consolidados, responsivos e acessíveis.
+  Observações: Mantém identidade visual; foco visível; tipografia ajustada.
+*/
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variáveis de tema */
+:root {
+  --cor-primaria: #1d9bf0;
+  --cor-secundaria: #0c85d0;
+  --cor-destaque: #e8f5fe;
+  --bg-claro: #ffffff;
+  --bg-secao: #f7f9f9;
+  --texto-principal: #0f1419;
+  --texto-claro: #ffffff;
+  --card-bg: #ffffff;
+  --nav-bg: #1d9bf0;
+}
+
+/* Tema escuro */
+body.dark {
+  --bg-claro: #000000;
+  --bg-secao: #16181c;
+  --texto-principal: #e7e9ea;
+  --card-bg: #16181c;
+  --nav-bg: #000000;
+}
+
+/* Tipografia da página */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: var(--bg-claro);
+  color: var(--texto-principal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 18px;
+  line-height: 1.65;
+  letter-spacing: 0.2px;
+}
+
+/* Header / nav */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--nav-bg);
+  z-index: 1000;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem;
+  height: 65px;
+  position: relative;
+}
+.menu-toggle {
+  display: none;
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--texto-claro);
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+#temaBtn {
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  color: var(--cor-primaria);
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+.nav-links a {
+  color: var(--texto-claro);
+  text-decoration: none;
+  font-weight: 700;
+  padding: 6px 8px;
+  border-radius: 4px;
+}
+.nav-links a:hover,
+.nav-links a:focus {
+  color: var(--texto-principal);
+  background: var(--bg-secao);
+}
+
+/* Main */
+main {
+  margin-top: 100px;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 1rem;
+}
+
+/* Seção base */
+.section {
+  padding: 40px;
+  margin: 20px auto;
+  background: var(--card-bg);
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+  max-width: 900px;
+}
+.section-content {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Top block */
+.top-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+  padding-top: 12px;
+}
+.avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--cor-secundaria);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+.top-name {
+  font-size: 2rem;
+  color: var(--cor-primaria);
+  margin: 0;
+}
+
+/* Títulos */
+.section-title {
+  font-size: 2rem;
+  color: var(--cor-primaria);
+  text-align: center;
+  margin-bottom: 8px;
+}
+.section-subtitle {
+  font-size: 1.15rem;
+  color: var(--texto-principal);
+  font-weight: 700;
+  margin: 18px 0 6px 0;
+  text-align: left;
+}
+
+/* Texto */
+.lead {
+  font-size: 1rem;
+  color: var(--texto-principal);
+  text-align: justify;
+  margin: 0 0 14px 0;
+}
+p {
+  font-size: 1rem;
+  text-align: justify;
+  color: var(--texto-principal);
+  margin: 0 0 14px 0;
+}
+
+.muted-link {
+  color: var(--cor-secundaria);
+  text-decoration: none;
+  text-underline-offset: 3px;
+}
+
+/* Info block */
+.info-block {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+
+/* Formulário: .field controla espaçamento; .actions centraliza botão enviar */
+/* Formulário */
+.form {
+  max-width: 100%;
+  padding: 10px 0;
+}
+.field {
+  margin-bottom: 12px;
+}
+.field label {
+  display: block;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  color: var(--cor-primaria);
+  margin-bottom: 6px;
+}
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--cor-secundaria);
+  border-radius: 6px;
+  background: var(--card-bg);
+  color: var(--texto-principal);
+  font-size: 1rem;
+}
+.field input:focus,
+.field textarea:focus {
+  outline: none;
+  border-color: var(--cor-destaque);
+  box-shadow: 0 0 0 4px rgba(29, 155, 240, 0.06);
+}
+
+.field.actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.field.actions .btn-enviar {
+  display: inline-block;
+  width: auto;
+  min-width: 160px;
+}
+
+/* Botões */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: var(--cor-primaria);
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
+.btn:hover {
+  background: var(--cor-secundaria);
+}
+.btn-enviar {
+  width: 50%;
+  padding: 0.9rem;
+  text-align: center;
+}
+
+/* Portfólio: parágrafos corridos */
+.descricao-projeto {
+  padding: 12px 0;
+  margin-bottom: 12px;
+}
+.foto-projeto {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 3px solid var(--cor-secundaria);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  display: block;
+  margin: 20px auto;
+}
+.botoes-centrais {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+  .field.actions {
+    padding: 0 8px;
+  }
+  .field.actions .btn-enviar {
+    width: 100%;
+    min-width: 0;
+  }
+  .nav-links {
+    position: absolute;
+    top: 65px;
+    left: 0;
+    width: 100%;
+    background: var(--nav-bg);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    box-sizing: border-box;
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition:
+      opacity 0.3s,
+      transform 0.3s;
+  }
+  .nav-links.active {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+  .avatar {
+    width: 120px;
+    height: 120px;
+  }
+  .btn-enviar {
+    width: 100%;
+  }
+}
+
+/* Acessibilidade: foco visível */
+:focus {
+  outline: 3px solid rgba(29, 155, 240, 0.25);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 4px rgba(29, 155, 240, 0.06);
+}
+a:focus,
+button:focus,
+input:focus,
+textarea:focus {
+  outline: 3px solid rgba(29, 155, 240, 0.28);
+  outline-offset: 2px;
+}
+
+/* Forçar títulos em cor primária no modo escuro */
+body.dark .section-title,
+body.dark .section-subtitle {
+  color: var(--cor-primaria);
+}

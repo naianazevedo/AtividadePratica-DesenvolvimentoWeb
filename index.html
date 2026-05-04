@@ -1,0 +1,227 @@
+<!--
+  Projeto: Portfólio - Naian Willian Azevedo da Silva
+  Arquivo: index.html
+  Autor: Naian Willian Azevedo da Silva
+  Data: 2026-05-03
+  Versão: 1.0
+  Objetivo: Estrutura principal do portfólio (Início, Sobre, Formação, Portfólio, Contato).
+  Observações: IDs importantes para JS: menuToggle, navLinks, temaBtn, contatoForm.
+-->
+
+
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfólio - Naian Azevedo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header>
+    <nav>
+      <button id="menuToggle" class="menu-toggle" aria-label="Abrir/fechar menu" aria-expanded="false">☰</button>
+      <ul id="navLinks" class="nav-links">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#sobremim">Sobre mim</a></li>
+        <li><a href="#formacao">Formação</a></li>
+        <li><a href="#portfolio">Portfólio</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+      <button id="temaBtn" aria-pressed="false">Alternar Tema</button>
+    </nav>
+  </header>
+
+  <main id="main" role="main">
+    <!-- Início: foto e nome (centralizados) -->
+    <section id="inicio" class="section">
+      <div class="section-content top-block">
+        <a href="fotoperfil.jpg" target="_blank" rel="noopener noreferrer">
+          <img src="fotoperfil.jpg" alt="Foto de perfil de Naian Azevedo" class="avatar">
+        </a>
+        <h1 class="section-title top-name">Naian Willian Azevedo da Silva</h1>
+        <p class="lead">
+          Olá, seja bem‑vindo(a) ao meu currículo online.
+          Aqui você encontrará informações sobre minha formação, projetos e formas de contato.
+          Sinta‑se à vontade para explorar e conhecer mais sobre mim!
+        </p>
+      </div>
+    </section>
+
+    <!-- Sobre Mim: informações pessoais e apresentação -->
+    <section id="sobremim" class="section" aria-labelledby="titulo-sobremim">
+      <div class="section-content">
+        <h2 id="titulo-sobremim" class="section-title">Sobre Mim 🪪</h2>
+
+        <h3 class="section-subtitle">Informações Pessoais 👤</h3>
+        <div class="info-block">
+          <p><strong>Nome:</strong> Naian Willian Azevedo da Silva</p>
+          <p><strong>Idade:</strong> 26 anos</p>
+          <p><strong>Localização:</strong> Mato Grosso, Brasil 📍</p>
+          <p><strong>Email:</strong> <a class="muted-link" href="#contato">naianwillianazevedo@hotmail.com 📧</a></p>
+        </div>
+
+        <h3 class="section-subtitle">Apresentação</h3>
+        <p class="lead">
+          Olá! Meu nome é Naian Willian Azevedo da Silva, tenho 26 anos e moro no interior do Mato Grosso.
+          Sou estudante de Ciência da Computação pela Uninter, atualmente no terceiro semestre.
+          Trabalho como auxiliar de infraestrutura de TI, atuando com manutenção de redes de fibra óptica,
+          configuração de equipamentos como switches, roteadores, servidores e câmeras de vigilância.
+          Estou em constante aprendizado e tenho interesse em desenvolvimento de software e segurança da informação.
+        </p>
+
+        <h3 class="section-subtitle">Hobbies</h3>
+        <p class="lead">
+          Gosto de jogar vôlei com amigos aos sábados e praticar musculação durante a semana.
+          Também gosto de assistir animes, especialmente dos gêneros
+          <a href="https://pt.wikipedia.org/wiki/Sh%C5%8Dnen" target="_blank" rel="noopener noreferrer"
+            class="muted-link">shounen</a>
+          e <a href="https://pt.wikipedia.org/wiki/Isekai" target="_blank" rel="noopener noreferrer"
+            class="muted-link">isekai</a>.
+          Meus favoritos incluem Demon Slayer, Jujutsu Kaisen e That Time I Got Reincarnated as a Slime.
+        </p>
+      </div>
+    </section>
+
+    <!-- Formação: informações sobre minha formação acadêmica e cursos realizados -->
+    <section id="formacao" class="section" aria-labelledby="titulo-formacao">
+      <div class="section-content">
+        <h2 id="titulo-formacao" class="section-title">Formação</h2>
+
+        <h3 class="section-subtitle">Formação Acadêmica 🎓</h3>
+        <div class="info-block">
+          <p>Graduação em Ciência da Computação - Uninter (<time datetime="2025">2025</time> - <time
+              datetime="2029">2029</time>)</p>
+          <p>Técnico em Agronegócio - <abbr title="Serviço Nacional de Aprendizagem Rural">SENAR</abbr> (<time
+              datetime="2023">2023</time> - <time datetime="2024">2024</time>)</p>
+          <p>Graduação em Tecnologia em Agroindústria - <abbr title="Instituto Federal de Mato Grosso">IFMT</abbr>
+            (<time datetime="2017">2017</time> - <time datetime="2023">2023</time>)</p>
+        </div>
+
+        <h3 class="section-subtitle">Cursos e Idiomas</h3>
+        <div class="info-block">
+          <p>Inglês III - <abbr title="Universidade Federal do Mato Grosso">UFMT</abbr> (<time
+              datetime="2024">2024</time>)</p>
+          <p>Imersão de Dados com Python - Alura (<time datetime="2026">2026</time>)</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfólio: projeto desenvolvido -->
+    <section id="portfolio" class="section" aria-labelledby="titulo-portfolio">
+      <div class="section-content">
+        <h2 id="titulo-portfolio" class="section-title">Portfólio 📁</h2>
+
+        <h3 class="section-subtitle">Projeto: Imersão de Dados com Python (Alura)</h3>
+
+        <p class="lead">
+          Este projeto foi desenvolvido durante a Imersão Dados da Alura com foco em análise de dados usando Python e
+          bibliotecas específicas para ciência de dados; o objetivo foi aplicar conceitos práticos de programação e
+          estatística para explorar, tratar e visualizar um conjunto de dados real, transformando informações brutas em
+          insights acionáveis e documentando todo o processo de análise.
+        </p>
+
+        <div class="descricao-projeto">
+          <p class="lead"><strong>Objetivos do projeto:</strong></p>
+          <p class="lead">
+            O projeto teve como objetivos desenvolver habilidades práticas em Python para análise de dados, aprender a
+            manipular e explorar conjuntos de dados com bibliotecas como Pandas e Numpy, criar visualizações
+            informativas com Matplotlib e Seaborn para comunicar insights de forma clara e documentar o processo de
+            análise para compartilhamento em repositório público no GitHub.
+          </p>
+
+          <p class="lead"><strong>Tecnologias utilizadas:</strong></p>
+          <p class="lead">
+            Foram utilizadas como base a linguagem Python e o ambiente Jupyter Notebook para experimentação e
+            documentação; as bibliotecas Pandas e Numpy foram empregadas para limpeza e manipulação de dados, enquanto
+            Matplotlib e Seaborn foram usadas para gerar gráficos e visualizações; arquivos auxiliares do projeto
+            incluem app.py, dados-imersao-final.csv e requirements.txt.
+          </p>
+
+          <p class="lead"><strong>Principais entregas:</strong></p>
+          <p class="lead">
+            As entregas incluem a organização dos dados em tabelas e gráficos que facilitam a interpretação, scripts em
+            Python para automatizar etapas de análise, documentação detalhada em português e inglês no README.md que
+            descreve objetivos e aprendizados, e a publicação do projeto em um repositório público no GitHub para
+            garantir versionamento e transparência.
+          </p>
+
+          <p class="lead"><strong>Aprendizados:</strong></p>
+          <p class="lead">
+            Ao longo do projeto houve fortalecimento da confiança no uso de Python para ciência de dados, prática de
+            boas práticas de versionamento com Git/GitHub, aplicação de conceitos de estatística e visualização para
+            extrair e comunicar insights, e experiência em compartilhar um projeto de forma aberta e colaborativa.
+          </p>
+        </div>
+
+        <div>
+          <a href="imersaopython.png" target="_blank" rel="noopener noreferrer">
+            <img src="imersaopython.png" alt="Print do projeto" class="foto-projeto">
+          </a>
+        </div>
+
+        <div class="botoes-centrais">
+          <a href="https://github.com/naianazevedo/Imersao-Dados-com-Python-Alura" target="_blank"
+            rel="noopener noreferrer" class="btn">Acessar no GitHub</a>
+          <a href="https://www.linkedin.com/in/naianazevedo/" target="_blank" rel="noopener noreferrer" class="btn">Ver
+            post no LinkedIn</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contato: formulário de contato e redes sociais-->
+    <section id="contato" class="section" aria-labelledby="titulo-contato">
+      <div class="section-content">
+        <h2 id="titulo-contato" class="section-title">Contato 📧</h2>
+        <h3 class="section-subtitle">Dúvidas, Propostas ou Agendamentos</h3>
+
+
+        <!-- Formulário de contato: validação em script.js; spans de erro: #erro-nome, #erro-email, #erro-mensagem -->
+        <form id="contatoForm" class="form" aria-describedby="mensagemConfirmacao" novalidate>
+          <div class="field">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+            <span class="erro" id="erro-nome" aria-live="polite"></span>
+          </div>
+
+          <div class="field">
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="exemplo_email@dominio.com" required>
+            <span class="erro" id="erro-email" aria-live="polite"></span>
+          </div>
+
+          <div class="field">
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" rows="4" placeholder="Digite sua mensagem" required></textarea>
+            <span class="erro" id="erro-mensagem" aria-live="polite"></span>
+          </div>
+
+          <div class="field actions">
+            <button type="submit" class="btn btn-enviar">Enviar</button>
+            <p id="mensagemConfirmacao" role="status" aria-live="polite"></p>
+          </div>
+
+        </form>
+
+        <h3 class="section-subtitle">Redes sociais 🌐</h3>
+        <div class="botoes-centrais">
+          <a href="https://github.com/naianazevedo" target="_blank" rel="noopener noreferrer" class="btn">GitHub</a>
+          <a href="https://www.linkedin.com/in/naianazevedo/" target="_blank" rel="noopener noreferrer"
+            class="btn">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer role="contentinfo" aria-label="Rodapé do site">
+    <p style="text-align:center; padding:20px;">@ 2026 - Naian Azevedo</p>
+  </footer>
+
+  <!-- Link arquivo javascript -->
+  <script src="script.js" defer></script>
+</body>
+
+</html>
